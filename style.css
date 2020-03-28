@@ -10,6 +10,15 @@ body {
 .container {
   margin: 0 auto;
   max-width: 800px;
-  height: 200px;
+  height: 315px;
+  width: 930px;
   background: #ffffff;
+}
+
+.container > div > div {
+  display: inline-block;
+  padding: 20px;
+  background-color: #f4f5f9;
+  border: 1px solid #000000;
+  border-radius: 10%;
 }
