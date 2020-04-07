@@ -461,8 +461,8 @@ function runOnKeys(func, ...codes) {
     pressed.add(event.code);
 
     if (pressed.has(...codes)) {
-      pressed.clear();
       func();
+      pressed.clear();
     }
   });
 
