@@ -568,9 +568,9 @@ function clickByMouse() {
     if (value === 'Backspace') {
       field.textContent = document.getElementById('textfield').textContent.slice(0, -1);
     } else if (value in currentCodes && capslock === true && isLetter(currentCodes[value])) {
-      field.document.getElementById('textfield').textContent += currentCodes[value].toUpperCase();
+      field.textContent += currentCodes[value].toUpperCase();
     } else if (value in currentCodes) {
-      field.document.getElementById('textfield').innerHTML += currentCodes[value];
+      field.innerHTML += currentCodes[value];
     }
   }
 
@@ -578,7 +578,7 @@ function clickByMouse() {
   document.getElementById('keyboard').addEventListener('mousedown', (event) => {
     clicked = event.target;
     if (clicked.classList.contains('button')) {
-      currentCodes.forEach((value) => {
+      Object.keys(currentCodes).forEach((value) => {
         if (clicked.classList.contains(value)) {
           pasteSymbol(value);
           clicked.classList.add('clicked');
@@ -586,6 +586,7 @@ function clickByMouse() {
       });
     }
   });
+
   document.getElementById('keyboard').addEventListener('mouseup', () => {
     clicked.classList.remove('clicked');
   });
