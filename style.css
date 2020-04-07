@@ -19,7 +19,7 @@ textarea {
   height: 300px;
   margin: 10px 0 5px;
   resize: none;
-  
+
 }
 
 .keyboard {
@@ -52,8 +52,18 @@ textarea {
   text-align: center;
 }
 
+#keyboard > div  div:hover {
+  background-color: #eeeeee;
+  box-shadow: 1px 1px 10px #bbbbbb;
+  transition: background-color 0.3s;
+}
+
 .container > div > .double {
   padding: 0.587% 0 5.175%;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .container > div:first-child > div:last-child {
@@ -115,8 +125,8 @@ textarea {
 }
 
 #keyboard .container .clicked {
-  color: #ffffff;
-  background-color: #b8babd;
+  background-color: #cccccc;
+  transition: background-color 0.35s;
 }
 
 @media (max-width: 920px) {
