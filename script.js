@@ -1,5 +1,6 @@
 const textareaLayout = `<div class="textarea-wrap">
-<textarea name="textfield" id="textfield" readonly>
+<textarea name="textfield" id="textfield" readonly
+placeholder="The Operation System is Windows\nTo switch language press ShiftLeft + AltLeft">
 </textarea>
 </div>`;
 
